@@ -1,0 +1,14 @@
+<package>
+  <description brief="water_channel_params">
+
+     water_channel_params
+
+  </description>
+  <author></author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/water_channel_params</url>
+
+</package>
+
+
