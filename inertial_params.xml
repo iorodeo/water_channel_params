@@ -1,8 +1,8 @@
 <launch>
 
     <!-- Bounds Checker parameters -->
-    <param name="dist_lower_bound" type="double" value="0.8" />
-    <param name="dist_upper_bound" type="double" value="20.00"/>
+    <param name="dist_lower_bound" type="double" value="0.5" />
+    <param name="dist_upper_bound" type="double" value="31.50"/>
 
     <!-- Controller params -->
     <param name="controller_pgain" type="double" value="6000.0"/>
@@ -25,7 +25,7 @@
     <!-- Actuator pwm parameters -->
     <param name="actuator_max_value" type="double" value="2000"/>
     <param name="actuator_min_value" type="double" value="1000"/>
-    <param name="actuator_default_value" type="double" value="1500"/>
+    <param name="actuator_default_value" type="double" value="1000"/>
 
 </launch> 
 

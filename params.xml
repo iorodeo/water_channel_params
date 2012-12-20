@@ -1,8 +1,8 @@
 <launch>
 
     <!-- Bounds Checker parameters -->
-    <param name="dist_lower_bound" type="double" value="0.8" />
-    <param name="dist_upper_bound" type="double" value="20.00"/>
+    <param name="dist_lower_bound" type="double" value="0.5" />
+    <param name="dist_upper_bound" type="double" value="31.50"/>
 
     <!-- Controller params -->
     <param name="controller_pgain" type="double" value="6000.0"/>
@@ -11,8 +11,12 @@
     <param name="controller_ffcoeff" type="double" value="5600"/>
 
     <!-- Force Sensor parameters  (N/DAC integer) -->
-    <param name="force_calibration" type="double" value="0.001"/>
-    <param name="force_zeroing_num" type="int" value="50"/>
+    <!-- Force calibration is the coeff. multiplied by the analog signal to get Newtons.. note: system calibrated by Will with calibration at 0.001; NOTE: Last calibrated for Transducer Techniques LSP-10 #257396 and got -0.0316397611994 on Dec 7, 2012. NOTE: If the direction of the force is wrong, just add/remove negative sign. -->
+    <param name="force_calibration" type="double" value="0.0316397611994"/>
+    <!-- 'force_zeroing_num' is number of samples to use in finding the zero. Done at system startup -->
+    <param name="force_zeroing_num" type="int" value="750"/>
+    <!-- 'force_filt_cutoff' sets the cutoff frequency for the force transducer's low-pass filter. 25Hz default -->
+    <param name="force_filt_cutoff" type="double" value="0.5"/>
 
     <!-- Actuator pwm parameters -->
     <param name="actuator_max_value" type="double" value="2000"/>
